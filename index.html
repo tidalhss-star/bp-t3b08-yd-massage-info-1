@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인문 철학 지식 저널 및 아카이브</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0d0d0f;
+      color: #ebebeb;
+      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      padding: 32px;
+    }
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .brand {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.05em;
+    }
+    nav { display: flex; gap: 24px; }
+    nav a {
+      color: #888888;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    nav a:hover { color: #f43f5e; }
+    main { margin-bottom: 80px; }
+    .label {
+      font-size: 0.75rem;
+      font-family: monospace;
+      color: #f43f5e;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    .article-body {
+      font-size: 1.15rem;
+      color: #cccccc;
+      font-weight: 400;
+      max-width: 780px;
+    }
+    .article-body p { margin-bottom: 24px; }
+    .juice-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: inset 0 -6px 0 #f43f5e;
+      transition: all 0.15s ease-in-out;
+    }
+    .juice-link:hover {
+      box-shadow: inset 0 -24px 0 #f43f5e;
+      color: #ffffff;
+    }
+    .archive-section {
+      margin-top: 80px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-family: monospace;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 32px;
+    }
+    .archive-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .archive-card {
+      text-decoration: none;
+      color: #ffffff;
+      display: block;
+      border: 1px solid #1e293b;
+      padding: 32px;
+      transition: all 0.2s ease;
+    }
+    .archive-card:hover {
+      border-color: #f43f5e;
+      background-color: #0f172a;
+    }
+    .archive-card h3 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .archive-card p {
+      color: #888888;
+      font-size: 0.95rem;
+    }
+    footer {
+      border-top: 1px solid #1e293b;
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-family: monospace;
+      color: #475569;
+    }
+    footer a { color: #475569; text-decoration: none; }
+    footer a:hover { color: #f43f5e; }
+    @media(max-width: 768px) {
+      header { flex-direction: column; gap: 20px; align-items: flex-start; }
+      h1 { font-size: 2.2rem; }
+      .archive-card { padding: 20px; }
+      .archive-card h3 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <a href="/" class="brand">STREET.KR</a>
+      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+    </header>
+    <main>
+      <div class="label">// BRUTALIST GRID SYSTEM</div>
+      <h1>인문 철학 지식 저널 및 아카이브</h1>
+      <div class="article-body">
+        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
+      </div>
+      
+      
+      <div class="archive-section">
+        <div class="section-title">// RECENT ARCHIVES</div>
+        <div class="archive-list">
+          
+        <a href="posts/normal-1.html" class="archive-card">
+          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
+          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
+        </a>
+      
+
+        <a href="posts/normal-2.html" class="archive-card">
+          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
+          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
+        </a>
+      
+
+        <a href="posts/normal-3.html" class="archive-card">
+          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
+          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
+        </a>
+      
+
+        <a href="posts/juice-1.html" class="archive-card">
+          <h3>지적 인문 철학 독자들을 위해 준비한 화곡 셔츠룸 통합 안내 리포트</h3>
+          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
+        </a>
+      
+
+        <a href="posts/juice-2.html" class="archive-card">
+          <h3>지적 인문 철학 독자들을 위해 준비한 화곡 셔츠룸 통합 안내 리포트</h3>
+          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
+        </a>
+      
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
+      <div>
+        <a href="sitemap.xml">SITEMAP</a> | 
+        <a href="#">PRIVACY</a> | 
+        <a href="#">DISCLAIMER</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
