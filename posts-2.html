@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b08-yd-massage-info-1</title>
+  <meta name="description" content="t3b08-yd-massage-info-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://yeouido-body-note.program-school.online/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ html {
+ scroll-behavior: smooth;
+ }
+
+ body {
+ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ background: #0a0e1a;
+ color: #e8eaf0;
+ line-height: 1.7;
+ font-weight: 400;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ color: #f0f2f8;
+ }
+
+ h1 {
+ font-size: 2.8rem;
+ line-height: 1.2;
+ margin-bottom: 1.2rem;
+ }
+
+ h2 {
+ font-size: 2rem;
+ line-height: 1.3;
+ margin-bottom: 1rem;
+ margin-top: 2.5rem;
+ }
+
+ h3 {
+ font-size: 1.4rem;
+ line-height: 1.4;
+ margin-bottom: 0.8rem;
+ margin-top: 1.8rem;
+ }
+
+ p {
+ margin-bottom: 1.2rem;
+ color: #c8ccd8;
+ font-size: 1.05rem;
+ }
+
+ a {
+ color: #8ab4f8;
+ text-decoration: none;
+ transition: color 0.2s ease;
+ }
+
+ a:hover {
+ color: #a8c8fa;
+ }
+
+ .container {
+ max-width: 1140px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+
+ header {
+ background: rgba(10, 14, 26, 0.92);
+ backdrop-filter: blur(16px);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ padding: 0.8rem 0;
+ }
+
+ .header-inner {
+ max-width: 1140px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ }
+
+ .logo {
+ font-size: 1.6rem;
+ font-weight: 800;
+ letter-spacing: -0.03em;
+ color: #f0f2f8;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ }
+
+ .logo span {
+ background: linear-gradient(135deg, #8ab4f8, #a8c8fa);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+
+ nav {
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+ }
+
+ nav a {
+ color: #b0b4c0;
+ font-size: 0.95rem;
+ font-weight: 500;
+ letter-spacing: 0.02em;
+ transition: color 0.2s ease;
+ position: relative;
+ }
+
+ nav a::after {
+ content: '';
+ position: absolute;
+ bottom: -4px;
+ left: 0;
+ width: 0;
+ height: 2px;
+ background: #8ab4f8;
+ transition: width 0.25s ease;
+ }
+
+ nav a:hover::after {
+ width: 100%;
+ }
+
+ nav a:hover {
+ color: #f0f2f8;
+ }
+
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 0.5rem;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 26px;
+ height: 2px;
+ background: #e8eaf0;
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+
+ .tel-link {
+ background: linear-gradient(135deg, #1a2a4a, #0f1a30);
+ border: 1px solid rgba(138, 180, 248, 0.25);
+ color: #8ab4f8 !important;
+ padding: 0.5rem 1.2rem;
+ border-radius: 50px;
+ font-weight: 600;
+ font-size: 0.9rem;
+ transition: all 0.25s ease;
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ }
+
+ .tel-link:hover {
+ background: linear-gradient(135deg, #1f3560, #142240);
+ border-color: rgba(138, 180, 248, 0.5);
+ color: #a8c8fa !important;
+ transform: translateY(-1px);
+ }
+
+ @media (max-width: 768px) {
+ h1 {
+ font-size: 2rem;
+ }
+ h2 {
+ font-size: 1.6rem;
+ }
+ .container {
+ padding: 0 1rem;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: rgba(10, 14, 26, 0.98);
+ backdrop-filter: blur(20px);
+ flex-direction: column;
+ padding: 1.5rem 2rem;
+ gap: 1.2rem;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+ }
+ nav.active {
+ display: flex;
+ }
+ .hamburger-menu {
+ display: flex;
+ }
+ .header-inner {
+ padding: 0 1rem;
+ }
+ }
+
+ .hero-section {
+ padding: 4rem 0 2rem;
+ text-align: center;
+ background: radial-gradient(ellipse at 50% 0%, rgba(20, 40, 70, 0.3), transparent 70%);
+ }
+
+ .hero-section p {
+ font-size: 1.2rem;
+ max-width: 720px;
+ margin: 0 auto 2rem;
+ color: #b0b8c8;
+ }
+
+ .info-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ margin: 3rem 0;
+ }
+
+ @media (max-width: 768px) {
+ .info-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ .info-card {
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid rgba(255, 255, 255, 0.06);
+ border-radius: 16px;
+ padding: 2rem;
+ transition: all 0.3s ease;
+ }
+
+ .info-card:hover {
+ background: rgba(255, 255, 255, 0.05);
+ border-color: rgba(138, 180, 248, 0.2);
+ transform: translateY(-4px);
+ }
+
+ .info-card h3 {
+ margin-top: 0;
+ font-size: 1.3rem;
+ }
+
+ .info-card p {
+ font-size: 0.95rem;
+ color: #b0b8c8;
+ }
+
+ .info-card .stat {
+ font-size: 2rem;
+ font-weight: 700;
+ color: #8ab4f8;
+ display: block;
+ margin-bottom: 0.5rem;
+ }
+
+ .faq-section {
+ margin: 4rem 0;
+ padding: 2rem 0;
+ border-top: 1px solid rgba(255, 255, 255, 0.06);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+ }
+
+ .faq-item {
+ padding: 1.5rem 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+ }
+
+ .faq-item:last-child {
+ border-bottom: none;
+ }
+
+ .faq-item h4 {
+ font-size: 1.1rem;
+ color: #e0e4f0;
+ margin-bottom: 0.5rem;
+ cursor: pointer;
+ }
+
+ .faq-item p {
+ font-size: 0.95rem;
+ color: #a8b0c0;
+ margin-bottom: 0;
+ }
+
+ footer {
+ padding: 3rem 0;
+ text-align: center;
+ border-top: 1px solid rgba(255, 255, 255, 0.06);
+ margin-top: 4rem;
+ }
+
+ footer p {
+ font-size: 0.85rem;
+ color: #6a7080;
+ }
+
+ .cta-section {
+ background: linear-gradient(135deg, rgba(20, 40, 70, 0.2), rgba(10, 14, 26, 0.4));
+ border: 1px solid rgba(138, 180, 248, 0.1);
+ border-radius: 20px;
+ padding: 3rem;
+ text-align: center;
+ margin: 3rem 0;
+ }
+
+ .cta-section h2 {
+ margin-top: 0;
+ }
+
+ .cta-section p {
+ max-width: 600px;
+ margin: 0 auto 1.5rem;
+ }
+
+ .cta-button {
+ display: inline-block;
+ background: linear-gradient(135deg, #1a2a4a, #0f1a30);
+ border: 1px solid rgba(138, 180, 248, 0.3);
+ color: #8ab4f8;
+ padding: 0.9rem 2.5rem;
+ border-radius: 50px;
+ font-weight: 600;
+ font-size: 1.05rem;
+ transition: all 0.25s ease;
+ }
+
+ .cta-button:hover {
+ background: linear-gradient(135deg, #1f3560, #142240);
+ border-color: rgba(138, 180, 248, 0.5);
+ color: #a8c8fa;
+ transform: translateY(-2px);
+ }
+
+ .badge {
+ display: inline-block;
+ background: rgba(138, 180, 248, 0.1);
+ border: 1px solid rgba(138, 180, 248, 0.15);
+ color: #8ab4f8;
+ padding: 0.2rem 0.8rem;
+ border-radius: 50px;
+ font-size: 0.8rem;
+ font-weight: 500;
+ margin-bottom: 0.8rem;
+ }
+
+ .price-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 2rem 0;
+ }
+
+ .price-table th,
+ .price-table td {
+ padding: 1rem 1.2rem;
+ text-align: left;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+ }
+
+ .price-table th {
+ color: #8ab4f8;
+ font-weight: 600;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+
+ .price-table td {
+ color: #c8ccd8;
+ }
+
+ .price-table tr:hover td {
+ background: rgba(255, 255, 255, 0.02);
+ }
+
+ @media (max-width: 768px) {
+ .price-table th,
+ .price-table td {
+ padding: 0.8rem 0.6rem;
+ font-size: 0.85rem;
+ }
+ .cta-section {
+ padding: 2rem 1.5rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b08-yd-massage-info-1">
+  <meta property="og:description" content="t3b08-yd-massage-info-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://yeouido-body-note.program-school.online/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <div class="logo">
+ <span>✦</span> 여의도마사지정보
+ </div>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('nav').classList.toggle('active')">
+ 
+ 
+ 
+ </button>
+ <nav>
+ <a href="/">홈</a>
+ <a href="/info">정보</a>
+ <a href="/guide">가이드</a>
+ <a href="/review">리뷰</a>
+ 
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0485.html">여의도 마사지 정보 분석으로 보는 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">여의도 마사지 정보를 검색하듯 마포 지역의 유흥 시설을 찾는 과정도 체계적인 단계가 필요합니다. 첫 번째 단계는 이용 목적과 인원수를 명확히 파악하고, 두 번째 단계로 해당 업체의 주류 및 시설 리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0486.html">여의도 마사지 정보 탐색만큼 중요한 구글 인덱싱 속도 초고속 광회선 대역폭 최적화 비교</a>
+        <p class="post-item__summary">여의도 마사지 정보를 찾는 속도가 데이터 로딩 속도에 달려있듯, 웹사이트의 검색 노출도 서버 환경에 의해 결정됩니다. 현재 인덱싱 속도를 높이기 위해 저가형 공유 호스팅을 고수할 것인가, 아니면 전</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0487.html">여의도 마사지 정보 확인하고 구글 신뢰 지수 모발이식 솔루션 도메인 파워 증폭하기</a>
+        <p class="post-item__summary">많은 이들이 피로 회복을 위해 여의도 마사지 정보를 검색하지만, 정작 중요한 준비 과정에서 실수를 범하는 경우가 많습니다. 특히 예약 단계에서 충분한 검토 없이 접근하면 시간과 비용 측면에서 효율이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0012.html">여의도 마사지 정보 확인 후 마곡 유흥 추천정보 비교하는 법</a>
+        <p class="post-item__summary">여러분은 평소 휴식을 취한 뒤에 이어지는 저녁 일정을 어떻게 관리하고 계신가요. 여의도 마사지 정보 등을 통해 몸의 피로를 먼저 풀고 나서 다음 장소를 물색하는 분들이 많습니다. 그런데 막상 마곡 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0013.html">여의도 마사지 정보 확인 후 방문하는 합정 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">도심 속에서 쌓인 피로를 풀기 위해 여의도 마사지 정보 등을 찾아보듯, 밤 문화를 즐길 때도 체계적인 탐색 과정이 필요합니다. 합정 인근에서 노래방을 선택할 때는 우선 해당 업체의 운영 연혁과 시설</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0014.html">여의도 마사지 정보 탐색만큼 꼼꼼한 연남 클럽 추천정보 선택 기준</a>
+        <p class="post-item__summary">휴식을 위한 여의도 마사지 정보 비교가 중요하듯, 연남동의 밤을 즐기기 위한 클럽 선택 또한 전략적인 접근이 필요합니다. 보통의 이용자들은 대규모 체인형 클럽과 개성 있는 로컬 클럽 사이에서 고민하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0015.html">여의도 마사지 정보 확인처럼 체계적인 합정 셔츠룸 추천정보 예약 절차</a>
+        <p class="post-item__summary">여의도 마사지 정보 확인이 신체 피로를 풀기 위한 필수 과정이라면, 합정 셔츠룸을 이용할 때는 예약 절차의 정확성이 무엇보다 중요합니다. 많은 사람이 예약 단계에서 실패하는 가장 큰 이유는 상세한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0016.html">여의도 마사지 정보와 비교해보는 공덕 가라오케 추천정보 위치 체크리스트</a>
+        <p class="post-item__summary">피로를 관리하는 여의도 마사지 정보 탐색처럼, 공덕에서 가라오케를 방문할 때도 입지 조건을 따져보는 것은 필수입니다. 업소의 위치는 단순한 주소를 넘어 접근성과 편의성을 결정짓는 핵심 요소입니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0017.html">여의도 마사지 정보 확인 후 방문하는 상수 마사지 추천정보 안내</a>
+        <p class="post-item__summary">장시간 책상에 앉아 업무를 보다 보면 어깨와 목 근육이 경직되어 피로가 누적되는 경우가 많습니다. 주말을 이용해 몸을 풀고자 여의도 마사지 정보를 검색하는 분들이 많은데, 이와 비슷한 맥락에서 상수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0018.html">여의도 마사지 정보 찾다 발견한 망원 노래방 추천정보와 이용 팁</a>
+        <p class="post-item__summary">많은 이들이 노래방을 단순히 술을 마시고 노래를 부르는 공간으로만 생각하지만, 실제로는 분위기와 음향 장비의 질에 따라 경험의 차이가 큽니다. 여의도 마사지 정보를 검색하던 분들이 퇴근 후 스트레스</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0019.html">여의도 마사지 정보 보며 고민하는 홍대 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">홍대 인근에서 적절한 노래방을 찾기 위해서는 몇 가지 충족 조건을 먼저 고려해야 합니다. 대중교통과의 접근성, 내부 공간의 넓이, 그리고 최신 음향 시스템 구축 여부가 대표적입니다. 여의도 마사지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0020.html">여의도 마사지 정보 비교와 비슷한 공덕 셔츠룸 추천정보 탐색</a>
+        <p class="post-item__summary">오늘 밤 무엇을 할지 고민하고 계신가요? 여의도 마사지 정보를 검색하다가 좀 더 활동적인 분위기의 공간을 찾으시는 분들이 많습니다. 공덕 지역의 셔츠룸을 방문할 계획이라면 막연한 기대보다는 명확한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0021.html">여의도 마사지 정보 확인 후 살펴보는 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">여의도 마사지 정보 탐색을 마무리한 뒤 연남 지역으로 이동하는 이용객들이 늘고 있습니다. 단순히 분위기에 휩쓸려 장소를 선택하기보다는 검증된 데이터를 바탕으로 방문지를 결정하는 것이 중요합니다. 효</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0022.html">여의도 마사지 정보 비교로 분석한 마곡 가라오케 추천정보 판단법</a>
+        <p class="post-item__summary">여의도 마사지 정보 검색을 통해 휴식의 가치를 체득한 이들이 이제는 활동적인 공간을 찾습니다. 특히 마곡 지역의 가라오케를 방문할 때는 두 가지 선택지 사이에서 고민하게 됩니다. 대형 프랜차이즈 형</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">여의도 마사지 정보</a>
+        <p class="post-item__summary">여의도 마사지 정보를 검색하는 분이라면, 체형 개선과 관련된 기본 지식을 함께 알아두는 것이 도움이 됩니다. 두피와 모발 건강은 전신 컨디션과 밀접하게 연결되어 있으며, 마사지를 받을 때 이러한 부</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">여의도 마사지 정보</a>
+        <p class="post-item__summary">여의도 지역에서는 다양한 마사지 정보가 제공됩니다. 마사지는 신체의 피로를 풀고 근육의 긴장을 완화하는 데 도움이 되는 활동으로, 올바른 정보를 바탕으로 선택하는 것이 중요합니다. 올바른 정보를 얻</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1bi8oid.html">체중보다 무거운 카드와 여의도 마사지 정보</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">normal 1</a>
+        <p class="post-item__summary">여의도 마사지 정보를 알아보는 사람들에게 다양한 선택지가 있습니다. 마사지는 몸과 마음의 건강을 위해 중요합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">여의도 마사지 정보</a>
+        <p class="post-item__summary">여의도 지역에서 건강과 편의를 위한 마사지 정보를 찾고 계신가요. 많은 분들이 업무 후 뭉친 어깨와 허리를 풀기 위해 적절한 마사지를 찾고 있습니다. 이때 신뢰할 수 있는 정보원이 있다면 훨씬 수월</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">여의도 마사지 정보</a>
+        <p class="post-item__summary">여의도 지역은 업무 시설이 밀집되어 있어 신체 피로가 빠르게 축적되는 환경적 특성을 지닙니다. 이러한 공간적 특성은 다양한 형태의 신체 관리 서비스에 대한 관심을 유발하며, 이용자에게는 효율적이고 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
